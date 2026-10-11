@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image2pdf-cli"
+version = "1.0.0"
+description = "A powerful, flexible CLI tool and Python library to convert images to PDF"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Abhi" }
+]
+dependencies = [
+    "Pillow>=9.0.0"
+]
+
+[project.scripts]
+image2pdf = "image2pdf.cli:main"
+img2pdf-cli = "image2pdf.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["image2pdf*"]
